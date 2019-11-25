@@ -40,9 +40,10 @@
       "progressUpdateIntervalMs": 1000
     },
     {
-      "text": "df \u003d spark.read.csv(\u0027s3://devexternal-mzhang/dataset/filtered_df_rank_ML_sep19.csv\u0027, header\u003dTrue, inferSchema\u003dTrue)  \r\ndf \u003d df.withColumn(\u0027label\u0027, df[\u0027rank\u0027] - 1)   \r\ndf \u003d df.withColumn(\u0027day_part\u0027, F.when(df.hour \u003c 3, \u0027g1\u0027).when(df.hour \u003c 6, \u0027g2\u0027).when(df.hour \u003c 9, \u0027g3\u0027).when(df.hour \u003c 12, \u0027g4\u0027).when(df.hour \u003c 15, \u0027g5\u0027).when(df.hour \u003c 18, \u0027g6\u0027).when(df.hour \u003c 21, \u0027g7\u0027).otherwise(\u0027g8\u0027))",
+      "title": "reading data",
+      "text": "#test for version\r\ndf \u003d spark.read.csv(\u0027s3://devexternal-mzhang/dataset/filtered_df_rank_ML_sep19.csv\u0027, header\u003dTrue, inferSchema\u003dTrue)  \r\ndf \u003d df.withColumn(\u0027label\u0027, df[\u0027rank\u0027] - 1)   \r\ndf \u003d df.withColumn(\u0027day_part\u0027, F.when(df.hour \u003c 3, \u0027g1\u0027).when(df.hour \u003c 6, \u0027g2\u0027).when(df.hour \u003c 9, \u0027g3\u0027).when(df.hour \u003c 12, \u0027g4\u0027).when(df.hour \u003c 15, \u0027g5\u0027).when(df.hour \u003c 18, \u0027g6\u0027).when(df.hour \u003c 21, \u0027g7\u0027).otherwise(\u0027g8\u0027))",
       "user": "mzhang@qubole.com",
-      "dateUpdated": "Sep 30, 2019 7:06:36 PM",
+      "dateUpdated": "Nov 25, 2019 10:29:37 PM",
       "config": {
         "colWidth": 12.0,
         "graph": {
@@ -55,7 +56,8 @@
           "scatter": {}
         },
         "enabled": true,
-        "editorMode": "ace/mode/python"
+        "editorMode": "ace/mode/python",
+        "title": true
       },
       "settings": {
         "params": {},
